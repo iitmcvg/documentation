@@ -8,7 +8,7 @@
 
 ### g3docs
 
-*[Getting Started](attendance-system/g3docs/getting-started.md)
+* [Getting Started](attendance-system/g3docs/getting-started.md)
 * [Model Zoo](attendance-system/g3docs/model-zoo.md)
 * [Installing Dependencies](attendance-system/g3docs/installing_dependencies.md)
 
