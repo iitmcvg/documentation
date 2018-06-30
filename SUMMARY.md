@@ -4,25 +4,26 @@
 
 ## Attendance System
 
-* [README](attendance-system/README.md)
+* [Face Recognition Setup](attendance-system/readme.md)
 
-### g3docs
+## g3docs
 
-* [Getting Started](attendance-system/g3docs/getting-started.md)
-* [Model Zoo](attendance-system/g3docs/model-zoo.md)
-* [Installing Dependencies](attendance-system/g3docs/installing_dependencies.md)
+* [Getting Started](g3docs/getting-started.md)
+* [Model Zoo](g3docs/model-zoo.md)
+* [Installing Dependencies](g3docs/installing-dependencies.md)
 
-### Facenet Docs
+## Facenet Docs
 
-* [David Sandberg's Implementation](attendance-system/g3docs/facenet.md)
-* [Retraining Facenet](attendance-system/g3docs/facenet_train_pipeline.md)
-* [Recognition with Facenet](attendance-system/g3docs/facenet_recognition_pipeline.md)
-* [Facenet Wiki](attendance-system/g3docs/facenet)
+* [David Sandberg's Implementation](facenet-docs/david-sandbergs-implementation.md)
+* [Retraining Facenet](facenet-docs/retraining-facenet.md)
+* [Recognition with Facenet](facenet-docs/recognition-with-facenet.md)
+* [Facenet Wiki](facenet-docs/facenet-wiki.md)
 
-### Object Detection Experimental Setup
+## Object Detection Experimental Setup
 
-* [Object Detection Pipeline](attendance-system/g3docs/object_detection_pipeline.md)
+* [Object Detection Pipeline](object-detection-experimental-setup/object-detection-pipeline.md)
 
-### Layer Models
+## Layer Models
 
-* [Layers Usage](attendance-system/g3docs/layers_usage.md)
+* [Layers Usage](layer-models/layers-usage.md)
+

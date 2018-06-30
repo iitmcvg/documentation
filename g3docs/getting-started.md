@@ -1,15 +1,14 @@
-## Usage
+# Getting Started
 
-### Basic Usage
+## Basic Usage
 
 These set of instructions are for running the trained models.
 
-#### Step 1: 
+### Step 1:
 
-Install all required dependencies by running (does not include tensorflow, opencv3):
-`pip install -r requirements.txt`
+Install all required dependencies by running \(does not include tensorflow, opencv3\): `pip install -r requirements.txt`
 
-#### Step 2:
+### Step 2:
 
 Place subjects as seperate folders under `media/train_image_classifier`.
 
@@ -17,18 +16,16 @@ There needs to be a minimum of two subjects.
 
 Download the following models from here:
 
-* [SSDLite mobilenet](https://drive.google.com/open?id=1k6ZXrgo4f0tU18tqlMLjN5tTb_6mwnsS): Place under detection/model/ssdlite_v2.pb [This can be customised]. 
+* [SSDLite mobilenet](https://drive.google.com/open?id=1k6ZXrgo4f0tU18tqlMLjN5tTb_6mwnsS): Place under detection/model/ssdlite\_v2.pb \[This can be customised\].
+* [Facenet Mobilenet](https://drive.google.com/open?id=1sBHIXC66tdKlj7pd9zxaEpxcGJmC5NA1): Place the frozen\_inference.pb under detection/model/mobilenet\_v2.pb \[This can be customised\].
 
-* [Facenet Mobilenet](https://drive.google.com/open?id=1sBHIXC66tdKlj7pd9zxaEpxcGJmC5NA1): Place the frozen_inference.pb under detection/model/mobilenet_v2.pb [This can be customised]. 
+### Step 3:
 
-#### Step 3:
-
-Run
-`python train_face_classify.py`
+Run `python train_face_classify.py`
 
 For non-standard flags, run as:
 
-```
+```text
 python train_face_classify.py [-h]
                               [--recognition_model {inception_resnet_v1,mobilenet_v2,inception_resnet_v2}]
                               [--detection_model {ssdlite_v2,ssd_mobilenet}]
@@ -49,9 +46,11 @@ optional arguments:
                         Embedding Size
 ```
 
-#### Step 4:
+### Step 4:
 
 Run
-```
+
+```text
 python demo_face_recognition.py
 ```
+
