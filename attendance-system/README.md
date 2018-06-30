@@ -2,7 +2,7 @@
 
 Computer Vision and1 Intelligence Group, IIT Madras
 
-![avatar](g3docs/avatar.png)
+<img src=g3docs/avatar.png width=300 height=300></img>
 
 We implement an experimental setup with face detection and recognition. This has been used for our purposes with the following aims:
 
