@@ -8,21 +8,21 @@
 
 ### g3docs
 
-*[Getting Started](g3docs/getting-started.md)
-* [Model Zoo](g3docs/model-zoo.md)
-* [Installing Dependencies](g3docs/installing_dependencies.md)
+*[Getting Started](attendance-system/g3docs/getting-started.md)
+* [Model Zoo](attendance-system/g3docs/model-zoo.md)
+* [Installing Dependencies](attendance-system/g3docs/installing_dependencies.md)
 
 ### Facenet Docs
 
-* [David Sandberg's Implementation](g3docs/facenet.md)
-* [Retraining Facenet](g3docs/facenet_train_pipeline.md)
-* [Recognition with Facenet](g3docs/facenet_recognition_pipeline.md)
-* [Facenet Wiki](g3docs/facenet)
+* [David Sandberg's Implementation](attendance-system/g3docs/facenet.md)
+* [Retraining Facenet](attendance-system/g3docs/facenet_train_pipeline.md)
+* [Recognition with Facenet](attendance-system/g3docs/facenet_recognition_pipeline.md)
+* [Facenet Wiki](attendance-system/g3docs/facenet)
 
 ### Object Detection Experimental Setup
 
-* [Object Detection Pipeline](g3docs/object_detection_pipeline.md)
+* [Object Detection Pipeline](attendance-system/g3docs/object_detection_pipeline.md)
 
 ### Layer Models
 
-* [Layers Usage](g3docs/layers_usage.md)
+* [Layers Usage](attendance-system/g3docs/layers_usage.md)
