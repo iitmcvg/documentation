@@ -25,36 +25,32 @@ def create_main_sidebar(md_dirs,sidebar_file):
     with open(sidebar_file,"w") as f:
         f.write(sidebar)
 
-def append_to_sidebar(md_dirs,sidebar_file):
+def create_folder_sidebar(dir,sidebar_file):
     '''
-    Recurse and add to the sidebar file
+    Recurse and add to the  folder sidebar file
     '''
-    sidebar='''* [Home](README.md) \n'''
+    sidebar='''* [{}]({}/README.md) \n'''.format(dir,dir)
 
-    for dir in md_dirs:
-        for root, dirs, files in os.walk(dir, topdown=True):
-            for name in files:
-                # Skip non markdown
-                if name[-2:]!="md":
-                    continue
+    root_covered=[]
+    for root, dirs, files in os.walk(dir, topdown=True):
+        for name in files:
+            # Skip non markdown
+            if name[-2:]!="md" or name[0]=="_":
+                continue
 
-                if root==dir and name=="README.md":
-                    sidebar+='''* [{}]({}) \n'''.format(dir,dir+"/README.md")
+            elif root=="/".join([dir,"g3docs"]):
 
-                elif root=="/".join([dir,"g3docs"]):
+                sidebar+='''\t* [{}]({}) \n'''.format(name[:-3],os.path.join(root,name))
 
-                    sidebar+='''\t* [{}]({}) \n'''.format(name[:-3],os.path.join(root,name))
+            elif "/".join([dir,"g3docs"]) in root:
+                if root not in root_covered:
+                    sidebar+="\t* "+root.split("/")[-1]+"\n"
+                    root_covered.append(root)
+                sidebar+='''\t\t* [{}]({}) \n'''.format(name[:-3],os.path.join(root,name))
 
-                elif "/".join([dir,"g3docs"]) in root:
-                    count=0
-                    if not count:
-                        sidebar+="\t* "+root.split("/")[-1]
-                    else:
-                        count+=1
-                    sidebar+='''\t\t* [{}]({}) \n'''.format(name[:-3],os.path.join(root,name))
-
-    with open(sidebar_file,"w") as f:
+    with open("/".join([dir,sidebar_file]),"w") as f:
         f.write(sidebar)
+
 
 def remove_all_except(dir,dirs,files):
     '''
@@ -92,6 +88,11 @@ def main():
             if os.path.exists(name):
                 shutil.rmtree(name)
         elif os.path.exists(name):
+            if os.path.exists(os.path.join(name,"g3docs")):
+                create_folder_sidebar(name,"_sidebar.md")
+                print(os.path.join(name,"g3docs"))
+            else:
+                print(os.path.join(name,"g3docs"))
             continue
 
         cmd = " ".join(["git clone ",link,name])
@@ -101,8 +102,7 @@ def main():
         # Remove Dirs
         remove_all_except(name,"g3docs","README.md")
 
-        if os.path.exists(os.path.join(dir,"g3docs")):
-            create_folder_sidebar()
+        
 
     create_main_sidebar(config.REPOS.keys(),"_sidebar.md")
 
