@@ -6,6 +6,25 @@ import summary_writer
 
 summary=summary_writer.Summary("SUMMARY.md")
 
+def create_main_sidebar(md_dirs,sidebar_file):
+    '''
+    Recurse and add to the sidebar file
+    '''
+    sidebar='''* [Home](README.md) \n'''
+
+    for dir in md_dirs:
+        for root, dirs, files in os.walk(dir, topdown=True):
+            for name in files:
+                # Skip non markdown
+                if name[-2:]!="md":
+                    continue
+
+                if root==dir and name=="README.md":
+                    sidebar+='''* [{}]({}) \n'''.format(dir,dir+"/README.md")
+
+    with open(sidebar_file,"w") as f:
+        f.write(sidebar)
+
 def append_to_sidebar(md_dirs,sidebar_file):
     '''
     Recurse and add to the sidebar file
@@ -25,6 +44,14 @@ def append_to_sidebar(md_dirs,sidebar_file):
                 elif root=="/".join([dir,"g3docs"]):
 
                     sidebar+='''\t* [{}]({}) \n'''.format(name[:-3],os.path.join(root,name))
+
+                elif "/".join([dir,"g3docs"]) in root:
+                    count=0
+                    if not count:
+                        sidebar+="\t* "+root.split("/")[-1]
+                    else:
+                        count+=1
+                    sidebar+='''\t\t* [{}]({}) \n'''.format(name[:-3],os.path.join(root,name))
 
     with open(sidebar_file,"w") as f:
         f.write(sidebar)
@@ -74,7 +101,10 @@ def main():
         # Remove Dirs
         remove_all_except(name,"g3docs","README.md")
 
-    append_to_sidebar(config.REPOS.keys(),"_sidebar.md")
+        if os.path.exists(os.path.join(dir,"g3docs")):
+            create_folder_sidebar()
+
+    create_main_sidebar(config.REPOS.keys(),"_sidebar.md")
 
 if __name__=='__main__':
     main()

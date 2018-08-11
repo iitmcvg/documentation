@@ -1,4 +1,4 @@
-# Facenet train Pipeline 
+# Retraining Facenet
 
 Dataset: [VGGFace 2](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/)
 
@@ -7,7 +7,8 @@ Dataset: [VGGFace 2](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/)
 ## /media/ssd1/face/datasets structure
 
 Tree
-```
+
+```text
 /media/ssd1/face/dataset
 |-- lfw-deepfunneled
 |-- lfw_mtcnnalign
@@ -16,14 +17,13 @@ Tree
 |-- train_mtcnnalign
 ```
 
-test, train refer to VGGFace 2
-[LFW](http://vis-www.cs.umass.edu/lfw/) is used for benchmarking. Deepfunneled branch used.
-Total number of images: 13233 (LFW Deepfunneled).
+test, train refer to VGGFace 2 [LFW](http://vis-www.cs.umass.edu/lfw/) is used for benchmarking. Deepfunneled branch used. Total number of images: 13233 \(LFW Deepfunneled\).
 
 ## Dataset structure
+
 It is assumed that the training dataset is arranged as below, i.e. where each class is a sub-directory containing the training examples belonging to that class.
 
-```
+```text
 Aaron_Eckhart
     Aaron_Eckhart_0001.jpg
 
@@ -43,7 +43,7 @@ Aaron_Peirsol
 
 ## Face alignment
 
-```
+```text
 for N in {1..8}; do \
 python facenet/src/align/align_dataset_mtcnn.py \
 /media/ssd1/face/dataset/train/ \
@@ -55,23 +55,17 @@ python facenet/src/align/align_dataset_mtcnn.py \
 & done
 ```
 
-### For LFW (Eval purposes)
+### For LFW \(Eval purposes\)
 
-python facenet/src/align/align_dataset_mtcnn.py \
-/media/ssd1/face/dataset/lfw-deepfunneled \
-/media/ssd1/face/dataset/lfw_mtcnnalign \
---image_size 182 \
---margin 44 \
---random_order \
---gpu_memory_fraction 1
+python facenet/src/align/align\_dataset\_mtcnn.py  /media/ssd1/face/dataset/lfw-deepfunneled  /media/ssd1/face/dataset/lfw\_mtcnnalign  --image\_size 182  --margin 44  --random\_order  --gpu\_memory\_fraction 1
 
-## Model (checkpoint storage) structure
+## Model \(checkpoint storage\) structure
 
 /
 
-## Classifier Training (Softmax loss)
+## Classifier Training \(Softmax loss\)
 
-```
+```text
 python facenet/src/train_softmax.py \
 --logs_base_dir /media/ssd1/face/facenet/logs \
 --models_base_dir /media/ssd1/face/facenet/models \
@@ -97,5 +91,4 @@ python facenet/src/train_softmax.py \
 ```
 
 ### Distance Metrics
-
 
