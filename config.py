@@ -1,0 +1,26 @@
+REPOS={
+    "attendance-system":{
+        "refresh":False,
+        "link":"https://github.com/iitmcvg/attendance-system.git"
+        },
+    "detection-pipeline":{
+        "refresh":False,
+        "link":"https://github.com/iitmcvg/detection-pipeline.git"
+        },
+    "drone-redtail":{
+        "refresh":False,
+        "link":"https://github.com/iitmcvg/redtail.git"
+        },
+    "cnn-slam":{
+        "refresh":False,
+        "link":"https://github.com/iitmcvg/CNN_SLAM.git"
+        },
+     "dockerfiles":{
+        "refresh":False,
+        "link":"https://github.com/iitmcvg/workstation.git"
+        },
+    "ubuntu-setup":{
+        "refresh":False,
+        "link":"https://github.com/iitmcvg/Ubuntu-Setup-Scripts.git"
+        }
+}

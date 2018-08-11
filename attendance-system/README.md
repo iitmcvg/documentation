@@ -2,7 +2,7 @@
 
 Computer Vision and1 Intelligence Group, IIT Madras
 
-<img src=g3docs/avatar.png width=300 height=300></img>
+![avatar](g3docs/avatar.png)
 
 We implement an experimental setup with face detection and recognition. This has been used for our purposes with the following aims:
 
@@ -47,6 +47,7 @@ Primarily, we use this in two use cases:
 * [ ] S3D support for detection.
 * [ ] Experiments with weight tying.
 * [ ] Results Section
+* [ ] Take a look at https://github.com/alexattia/ExtendedTinyFaces for large scale face detection.
 
 ## Dependencies
 

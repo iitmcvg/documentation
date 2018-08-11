@@ -13,7 +13,7 @@ class Summary(object):
         self.filepath=filepath
         self._init_from_file(self.filepath)
 
-    def _init_from_file(filepath):
+    def _init_from_file(self,filepath):
         '''
         Read summary and split into dictionary
         '''

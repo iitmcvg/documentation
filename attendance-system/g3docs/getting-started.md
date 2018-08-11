@@ -21,10 +21,14 @@ Download the following models from here:
 
 * [Facenet Mobilenet](https://drive.google.com/open?id=1sBHIXC66tdKlj7pd9zxaEpxcGJmC5NA1): Place the frozen_inference.pb under detection/model/mobilenet_v2.pb [This can be customised]. 
 
+* [Facenet Inception_ Resnet_v1](https://drive.google.com/open?id=1S98bS1bQM9BuxXqmwJAGS6SNkMz_Rzj0): Place the frozen_inference.pb under detection/model/inception_resnet_v1.pb [This can be customised]. 
+
 #### Step 3:
 
 Run
-`python train_face_classify.py`
+`python train_face_classify.py` (mobilenet)
+
+`python train_face_classify.py --recognition_model inception_resnet_v1`
 
 For non-standard flags, run as:
 
@@ -52,6 +56,8 @@ optional arguments:
 #### Step 4:
 
 Run
-```
-python demo_face_recognition.py
-```
+
+`python demo_face_recognition.py (mobilenet)`
+
+
+`python train_face_classify.py --recognition_model inception_resnet_v1` (inception_resnet)
