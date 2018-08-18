@@ -6,12 +6,16 @@ import summary_writer
 
 summary=summary_writer.Summary("SUMMARY.md")
 
-def create_main_sidebar(md_dirs,sidebar_file):
+def create_main_sidebar(repos,sidebar_file,navbar_file):
     '''
     Recurse and add to the sidebar file
     '''
     sidebar='''* [Home](README.md) \n'''
 
+    md_dirs=repos.keys()
+    repo_side_bar={}
+    repo_nav_bar={}
+    
     for dir in md_dirs:
         for root, dirs, files in os.walk(dir, topdown=True):
             for name in files:
@@ -23,6 +27,9 @@ def create_main_sidebar(md_dirs,sidebar_file):
                     sidebar+='''* [{}]({}) \n'''.format(dir,dir+"/README.md")
 
     with open(sidebar_file,"w") as f:
+        f.write(sidebar)
+
+    with open("_navbar.md","w") as f:
         f.write(sidebar)
 
 def create_folder_sidebar(dir,sidebar_file):
@@ -87,24 +94,22 @@ def main():
         if refresh:
             if os.path.exists(name):
                 shutil.rmtree(name)
-        elif os.path.exists(name):
-            if os.path.exists(os.path.join(name,"g3docs")):
-                create_folder_sidebar(name,"_sidebar.md")
-                print(os.path.join(name,"g3docs"))
-            else:
-                print(os.path.join(name,"g3docs"))
-            continue
-
-        cmd = " ".join(["git clone ",link,name])
-        ps = subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
-        output = ps.communicate()[0]
-
-        # Remove Dirs
-        remove_all_except(name,"g3docs","README.md")
-
         
+            cmd = " ".join(["git clone --depth 1",link,name])
+            ps = subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+            output = ps.communicate()[0]
 
-    create_main_sidebar(config.REPOS.keys(),"_sidebar.md")
+            # Remove Dirs
+            remove_all_except(name,"g3docs","README.md")
+
+     
+        if os.path.exists(os.path.join(name,"g3docs")):
+            create_folder_sidebar(name,"_sidebar.md")
+            print(os.path.join(name,"g3docs"))
+        else:
+            print(os.path.join(name,"g3docs"))
+
+    create_main_sidebar(config.REPOS,"_sidebar.md","navbar.md")
 
 if __name__=='__main__':
     main()

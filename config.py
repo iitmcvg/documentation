@@ -1,26 +1,37 @@
 REPOS={
     "attendance-system":{
-        "refresh":False,
-        "link":"https://github.com/iitmcvg/attendance-system.git"
+        "refresh":True,
+        "link":"https://github.com/iitmcvg/attendance-system.git",
+        "type":"project"
         },
     "detection-pipeline":{
-        "refresh":False,
-        "link":"https://github.com/iitmcvg/detection-pipeline.git"
+        "refresh":True,
+        "link":"https://github.com/iitmcvg/detection-pipeline.git",
+        "type":"project"
         },
     "drone-redtail":{
-        "refresh":False,
-        "link":"https://github.com/iitmcvg/redtail.git"
+        "refresh":True,
+        "link":"https://github.com/iitmcvg/redtail.git",
+        "type":"project"
         },
     "cnn-slam":{
-        "refresh":False,
-        "link":"https://github.com/iitmcvg/CNN_SLAM.git"
+        "refresh":True,
+        "link":"https://github.com/iitmcvg/CNN_SLAM.git",
+        "type":"project"
         },
      "dockerfiles":{
-        "refresh":False,
-        "link":"https://github.com/iitmcvg/workstation.git"
+        "refresh":True,
+        "link":"https://github.com/iitmcvg/workstation.git",
+        "type":"tools"
         },
     "ubuntu-setup":{
-        "refresh":False,
-        "link":"https://github.com/iitmcvg/Ubuntu-Setup-Scripts.git"
-        }
+        "refresh":True,
+        "link":"https://github.com/iitmcvg/Ubuntu-Setup-Scripts.git",
+        "type":"tools"
+        },
+    "holojest":{
+    "refresh":True,
+    "link":"https://github.com/iitmcvg/holojest.git",
+    "type":"project"
+    }
 }
