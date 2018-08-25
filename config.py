@@ -1,36 +1,36 @@
 REPOS={
     "attendance-system":{
-        "refresh":True,
+        "refresh":False,
         "link":"https://github.com/iitmcvg/attendance-system.git",
         "type":"project"
         },
     "detection-pipeline":{
-        "refresh":True,
+        "refresh":False,
         "link":"https://github.com/iitmcvg/detection-pipeline.git",
         "type":"project"
         },
     "drone-redtail":{
-        "refresh":True,
+        "refresh":False,
         "link":"https://github.com/iitmcvg/redtail.git",
         "type":"project"
         },
     "cnn-slam":{
-        "refresh":True,
+        "refresh":False,
         "link":"https://github.com/iitmcvg/CNN_SLAM.git",
         "type":"project"
         },
      "dockerfiles":{
-        "refresh":True,
+        "refresh":False,
         "link":"https://github.com/iitmcvg/workstation.git",
-        "type":"tools"
+        "type":"utils"
         },
     "ubuntu-setup":{
-        "refresh":True,
+        "refresh":False,
         "link":"https://github.com/iitmcvg/Ubuntu-Setup-Scripts.git",
-        "type":"tools"
+        "type":"utils"
         },
     "holojest":{
-    "refresh":True,
+    "refresh":False,
     "link":"https://github.com/iitmcvg/holojest.git",
     "type":"project"
     }
