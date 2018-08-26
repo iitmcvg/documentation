@@ -9,6 +9,11 @@ REPOS={
         "link":"https://github.com/iitmcvg/detection-pipeline.git",
         "type":"project"
         },
+    "fast-image-classification":{
+        "refresh":True,
+        "link":"https://github.com/iitmcvg/Fast-Image-Classification.git",
+        "type":"project"
+        },
     "drone-redtail":{
         "refresh":False,
         "link":"https://github.com/iitmcvg/redtail.git",
@@ -17,6 +22,31 @@ REPOS={
     "cnn-slam":{
         "refresh":False,
         "link":"https://github.com/iitmcvg/CNN_SLAM.git",
+        "type":"project"
+        },
+    "holojest":{
+        "refresh":False,
+        "link":"https://github.com/iitmcvg/holojest.git",
+        "type":"project"
+        },
+    "super-resolution":{
+        "refresh":True,
+        "link":"https://github.com/iitmcvg/Super-Resolution.git",
+        "type":"project"
+        },
+    "pix2pix-mountains":{
+        "refresh":True,
+        "link":"https://github.com/iitmcvg/webcam-pix2pix-tensorflow.git",
+        "type":"project"
+        },
+    "cell-segmentation":{
+        "refresh":True,
+        "link":"https://github.com/iitmcvg/Cell-Segmentation.git",
+        "type":"project"
+        },
+    "activity-recognition-deep-pose":{
+        "refresh":True,
+        "link":"https://github.com/iitmcvg/Activity-Recognition-Deep-Pose.git",
         "type":"project"
         },
      "dockerfiles":{
@@ -29,9 +59,9 @@ REPOS={
         "link":"https://github.com/iitmcvg/Ubuntu-Setup-Scripts.git",
         "type":"utils"
         },
-    "holojest":{
-    "refresh":False,
-    "link":"https://github.com/iitmcvg/holojest.git",
-    "type":"project"
-    }
+    "raspberry-setup":{
+        "refresh":False,
+        "link":"https://github.com/iitmcvg/Raspberry_Setup.git",
+        "type":"utils"
+        }
 }

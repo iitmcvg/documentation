@@ -2,7 +2,9 @@
 
 _Tentative 15th September for initial release._
 
-Our markdown based documentation engine. 
+_**Last Updated**: {docsify-updated}_
+
+Our git integrated documentation engine. 
 
 ## Usage
 

@@ -1,10 +1,10 @@
 <!-- _coverpage.md -->
 
-![logo](_media/icon_black.svg)
+<!--![logo](_media/icon_black.svg)-->
 
-# CVI Docs <small>Beta</small>
+# <img src="_media/avatar.png" width="152" height="72"> Docs <small>Beta</small>
 
-> A git workflow documentation site generator.
+> A git workflow based documentation engine.
 
 * Pulls content directly from `g3docs` folders.
 * No more obsolete, incomplete or irrelevent docs.

@@ -74,7 +74,7 @@ def create_main_sidebar(repos,sidebar_file,navbar_file):
     side_bar+="\n* [Projects](projects.md) \n" 
 
     # Add projects to main sidebar
-    for dir_name in repo_side_bar.keys():
+    for dir_name in sorted(repo_side_bar.keys()):
         if dir_name=="home":
             continue
         md_dir=_reverse_transform(dir_name)
@@ -86,7 +86,7 @@ def create_main_sidebar(repos,sidebar_file,navbar_file):
     side_bar+="* [Utils](utils.md) \n"
 
     # Add utils to main sidebar
-    for dir_name in repo_side_bar.keys():
+    for dir_name in sorted(repo_side_bar.keys()):
         if dir_name=="home":
             continue
         md_dir=_reverse_transform(dir_name)
@@ -123,7 +123,7 @@ def create_folder_sidebar(dir,sidebar_file):
 
     root_covered=[]
     for root, dirs, files in os.walk(dir, topdown=True):
-        for name in files:
+        for name in sorted(files):
             # Skip non markdown
             if name[-2:]!="md" or name[0]=="_":
                 continue
@@ -184,12 +184,13 @@ def main():
             # Remove Dirs
             remove_all_except(name,"g3docs","README.md")
 
-     
         if os.path.exists(os.path.join(name,"g3docs")):
             create_folder_sidebar(name,"_sidebar.md")
             print(os.path.join(name,"g3docs"))
         else:
             print(os.path.join(name,"g3docs"))
+
+        count+=1
 
     create_main_sidebar(config.REPOS,"_sidebar.md","navbar.md")
 
