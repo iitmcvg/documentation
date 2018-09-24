@@ -12,7 +12,9 @@ uav 7002
 holojest 8002    
 anand 9002  
 keerthan 10002  
-rohith 11002  
+rohith 11002
+rishhanth 12002
+nikhil 13002
 
 ## MSI :
 

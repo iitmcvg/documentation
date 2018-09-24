@@ -12,3 +12,4 @@ Projects :
 * [Holojest](holojest/README.md)
 * [Pix2pix mountains](pix2pix-mountains/README.md)
 * [Super resolution](super-resolution/README.md)
+* [Uav imagery](uav-imagery/README.md)

@@ -11,6 +11,7 @@
 	* [Holojest](holojest/README.md)
 	* [Pix2pix mountains](pix2pix-mountains/README.md)
 	* [Super resolution](super-resolution/README.md)
+	* [Uav imagery](uav-imagery/README.md)
 * [Utils](utils.md) 
 	* [Dockerfiles](dockerfiles/README.md)
 	* [Raspberry setup](raspberry-setup/README.md)
