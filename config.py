@@ -1,11 +1,11 @@
 REPOS={
     "attendance-system":{
-        "refresh":False,
+        "refresh":True,
         "link":"https://github.com/iitmcvg/attendance-system.git",
         "type":"project"
         },
     "detection-pipeline":{
-        "refresh":False,
+        "refresh":True,
         "link":"https://github.com/iitmcvg/detection-pipeline.git",
         "type":"project"
         },
@@ -15,17 +15,22 @@ REPOS={
         "type":"project"
         },
     "drone-redtail":{
-        "refresh":False,
+        "refresh":True,
         "link":"https://github.com/iitmcvg/redtail.git",
         "type":"project"
         },
+    "uav-imagery":{
+        "refresh":True,
+        "link":"https://github.com/iitmcvg/UAV_For_Disaster_Management.git",
+        "type":"project"
+        },
     "cnn-slam":{
-        "refresh":False,
+        "refresh":True,
         "link":"https://github.com/iitmcvg/CNN_SLAM.git",
         "type":"project"
         },
     "holojest":{
-        "refresh":False,
+        "refresh":True,
         "link":"https://github.com/iitmcvg/holojest.git",
         "type":"project"
         },
@@ -50,17 +55,17 @@ REPOS={
         "type":"project"
         },
      "dockerfiles":{
-        "refresh":False,
+        "refresh":True,
         "link":"https://github.com/iitmcvg/workstation.git",
         "type":"utils"
         },
     "ubuntu-setup":{
-        "refresh":False,
+        "refresh":True,
         "link":"https://github.com/iitmcvg/Ubuntu-Setup-Scripts.git",
         "type":"utils"
         },
     "raspberry-setup":{
-        "refresh":False,
+        "refresh":True,
         "link":"https://github.com/iitmcvg/Raspberry_Setup.git",
         "type":"utils"
         }
