@@ -5,3 +5,4 @@
 	* [redtail](dockerfiles/g3docs/redtail.md) 
 	* [rmate](dockerfiles/g3docs/rmate.md) 
 	* [vanilla](dockerfiles/g3docs/vanilla.md) 
+	* [vnc](dockerfiles/g3docs/vnc.md) 
