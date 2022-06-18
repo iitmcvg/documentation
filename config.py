@@ -4,6 +4,11 @@ REPOS={
         "link":"https://github.com/iitmcvg/attendance-system.git",
         "type":"project"
         },
+    "project_2022_23_template":{
+        "refresh":True,
+        "link":"https://github.com/iitmcvg/project_2022_23_template.git",
+        "type":"project"
+        },
     "detection-pipeline":{
         "refresh":True,
         "link":"https://github.com/iitmcvg/detection-pipeline.git",
